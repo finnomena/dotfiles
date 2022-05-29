@@ -9,7 +9,7 @@ else
 endif
 
 ifndef BREW
-	/usr/bin/ruby -e "$$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+	/bin/bash -c "$$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 	if [ ${ARCH} == "arm64" ]; then \
 		echo 'eval "$$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile; \
 		eval "$$(/opt/homebrew/bin/brew shellenv)"; \
